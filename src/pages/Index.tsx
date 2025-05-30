@@ -1,4 +1,3 @@
-
 import { Mail, Phone, Linkedin, Github, User, Briefcase, FileText, Code, Terminal, Cpu, Database, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,7 +7,8 @@ const Index = () => {
   const skills = [
     "Microsoft Office Suite", "Data Entry", "Database Management", "IT Support", 
     "Network Troubleshooting", "Report Generation", "Data Analysis", "System Administration",
-    "Cybersecurity", "Technical Documentation", "Customer Support", "Project Management"
+    "Cybersecurity", "Technical Documentation", "Customer Support", "Project Management",
+    "Web Development"
   ];
 
   const workExperience = [
@@ -117,14 +117,29 @@ const Index = () => {
               IT Support • Database Management • System Administration
             </p>
             <p className="text-md text-gray-500 mb-8 max-w-2xl mx-auto font-mono">
-              No. 4 Kauran Namoda Road, Diplomat Area, Sokoto State
+              Abuja, Nigeria
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-green-500 hover:bg-green-600 text-black font-bold px-8 py-3 border border-green-400 shadow-lg shadow-green-500/25">
+              <Button 
+                size="lg" 
+                className="bg-green-500 hover:bg-green-600 text-black font-bold px-8 py-3 border border-green-400 shadow-lg shadow-green-500/25"
+                onClick={() => window.location.href = 'mailto:rufaishagari0707@outlook.com'}
+              >
                 <Mail className="w-5 h-5 mr-2" />
                 Get In Touch
               </Button>
-              <Button variant="outline" size="lg" className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black px-8 py-3 font-mono">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black px-8 py-3 font-mono"
+                onClick={() => {
+                  // Create a temporary link to download CV
+                  const link = document.createElement('a');
+                  link.href = '/ahmad-rufai-shagari-cv.pdf';
+                  link.download = 'Ahmad_Rufai_Shagari_CV.pdf';
+                  link.click();
+                }}
+              >
                 <FileText className="w-5 h-5 mr-2" />
                 Download CV
               </Button>
@@ -337,7 +352,7 @@ const Index = () => {
               <CardContent className="flex flex-col items-center p-6">
                 <Phone className="w-8 h-8 text-cyan-400 mb-3" />
                 <h3 className="text-white font-semibold mb-2 font-mono">Phone</h3>
-                <p className="text-gray-400 text-sm font-mono">+234 7019634292</p>
+                <p className="text-gray-400 text-sm font-mono">+234 701 963 4292</p>
               </CardContent>
             </Card>
             
