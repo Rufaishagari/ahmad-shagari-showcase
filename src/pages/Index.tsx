@@ -114,7 +114,7 @@ const Index = () => {
               <span className="animate-pulse">|</span>
             </div>
             <p className="text-lg md:text-xl text-gray-400 mb-4 max-w-3xl mx-auto">
-              IT Support • Database Management • System Administration
+              IT Support • Web Developer • System Administration
             </p>
             <p className="text-md text-gray-500 mb-8 max-w-2xl mx-auto font-mono">
               Abuja, Nigeria
